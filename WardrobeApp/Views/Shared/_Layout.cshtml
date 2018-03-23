@@ -9,9 +9,10 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Roboto|Pacifico" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://i.icomoon.io/public/234ccb3045/Lineariconsall/style.css">
+    <script src="~/Content/JavaScript.js"></script>
 </head>
     <body onload="myFunction()" style="margin:0;">
-        @* Page loader *@
+        @*Page Loader*@ 
 
         <div id="loader">
             <div class="flying-area">
@@ -69,6 +70,7 @@
                             <li>@Html.ActionLink("Shoes", "Index", "Shoes")</li>
                             <li>@Html.ActionLink("Outfits", "Index", "Outfits")</li>
                         </ul>
+                        <a href="" onclick="Redirect()" id="learn"><span title="Learn About Rabbit Care!" class="icon-reading"></span></a>
                         <span class="icon-hanger"></span>
                     </div>
                 </div>
@@ -77,10 +79,11 @@
                 @RenderBody()
                 <hr />
                 <footer>
-                    <p>&copy; @DateTime.Now.Year - Kristin Weis</p>
+                    <p onmouseover="overBtn(this)" onmouseleave="outBtn(this)" id="footer">&copy; @DateTime.Now.Year</p>
                 </footer>
             </div>
             <script>
+
                 var myVar;
 
                 function myFunction() {
@@ -91,6 +94,7 @@
                     document.getElementById("loader").style.display = "none";
                     document.getElementById("myDiv").style.display = "block";
                 }
+
             </script>
 
             @Scripts.Render("~/bundles/jquery")

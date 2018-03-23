@@ -811,3 +811,19 @@ article { /*This ensures that the images on the outfit details page stay in a li
     margin-top: 100px;
 }
 
+#set-bunny-name {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.icon-reading {
+    font-size: 30px;
+    color: #40486b;
+    padding-right: 20px;
+}
+
+.icon-reading:hover {
+    color: #a87e01;
+}
+
