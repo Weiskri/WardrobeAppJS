@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WardrobeApp.Models.Bottom>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h4>Bottoms</h4>
+
+<p>
+    <button type="button" class="btn btn-default">Add a New Bottom to the Closet<a href="/Bottoms/Create"> <i class="fas fa-plus-circle"></i></a></button>
+</p>
+
+    @foreach (var item in Model)
+    {
+
+        <div class="col-md-4">
+            <div class="thumbnail outfit">
+                <div class="caption outfit">
+                    
+                    <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+                    <img src="@Html.DisplayFor(modelItem => item.Photo)" class="clothes-thumbnail" /><br /><br />
+                    <p>
+                        <div class='banner'><div class='banner_l'></div><div class='banner_txt'>@Html.DisplayFor(modelItem => item.Type)</div><div class='banner_r'></div></div>
+                        <br />
+                    </p>
+                    <p>
+                        <a href="@Url.Action("Edit", "Bottoms", new { id = item.BottomsID })" class="fas fa-edit"></a>
+                        <a href="@Url.Action("Details", "Bottoms", new { id = item.BottomsID })" class="fas fa-info-circle"></a>
+                        <a href="@Url.Action("Delete", "Bottoms", new { id = item.BottomsID})" class="fas fa-trash-alt"></a>
+                    </p>
+                </div></div></div>
+                    }
+    </div>

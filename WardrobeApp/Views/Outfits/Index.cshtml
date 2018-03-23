@@ -1,0 +1,42 @@
+﻿@model IEnumerable<WardrobeApp.Models.Outfit>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h4>Outfits</h4>
+
+<p>
+    <button type="button" class="btn btn-default">Put Together a New Outfit<a href="/Outfits/Create"> <i class="fas fa-plus-circle"></i></a></button>
+</p>
+
+
+@foreach (var item in Model)
+{
+
+    <div class="col-md-4">
+        <div class="thumbnail outfit">
+            <div class="caption outfit">
+                <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+                <img src="@Html.DisplayFor(modelItem => item.Top.Photo)" class="outfit-thumbs" />
+                <img src="@Html.DisplayFor(modelItem => item.Bottom.Photo)" class="outfit-thumbs" />
+                <img src="@Html.DisplayFor(modelItem => item.Accessory.Photo)" class="outfit-thumbs" />
+                <img src="@Html.DisplayFor(modelItem => item.Sho.Photo)" class="outfit-thumbs" /><br /><br />
+                <p>
+                    <button type="button" class="btn btn-default"><a href="@Url.Action("Details", "Tops", new { id = item.TopsID })">@Html.DisplayFor(modelItem => item.Top.Name)</a></button>
+                    <button type="button" class="btn btn-default"><a href="@Url.Action("Details", "Bottoms", new { id = item.BottomsID })">@Html.DisplayFor(modelItem => item.Bottom.Name)</a></button>
+                    <button type="button" class="btn btn-default"><a href="@Url.Action("Details", "Accessories", new { id = item.AccessoriesID })">@Html.DisplayFor(modelItem => item.Accessory.Name)</a></button>
+                    <button type="button" class="btn btn-default"><a href="@Url.Action("Details", "Shoes", new { id = item.ShoesID })">@Html.DisplayFor(modelItem => item.Sho.Name)</a></button>
+                </p>
+                <p>
+                    <a href="@Url.Action("Edit", "Outfits", new { id = item.OutfitsID })" class="fas fa-edit"></a>
+                    <a href="@Url.Action("Details", "Outfits", new { id = item.OutfitsID })" class="fas fa-info-circle"></a>
+                    <a href="@Url.Action("Delete", "Outfits", new { id = item.OutfitsID})" class="fas fa-trash-alt"></a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+}
+</div>

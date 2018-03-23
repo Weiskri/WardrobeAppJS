@@ -1,0 +1,130 @@
+﻿@model WardrobeApp.Models.Outfit
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="row details">
+    <div class="col-md-1"></div>
+    <div class="col-md-6">
+        <section class="gallery">
+            <article id="one" class="target">
+                <figure>
+                    <img src="@Html.DisplayFor(model => model.Top.Photo)" alt="Top Photo" class="outfits-gallery">
+                </figure>
+            </article>
+            <article id="two" class="target">
+                <figure>
+                    <img src="@Html.DisplayFor(model => model.Bottom.Photo)" alt="Bottom Photo" class="outfits-gallery">
+                </figure>
+            </article>
+            <article id="three" class="target">
+                <figure>
+                    <img src="@Html.DisplayFor(model => model.Accessory.Photo)" alt="Accessory Photo" class="outfits-gallery">
+                </figure>
+            </article>
+            <article id="four" class="target">
+                <figure>
+                    <img src="@Html.DisplayFor(model => model.Sho.Photo)" alt="Shoes Photo" class="outfits-gallery">
+                </figure>
+            </article>
+        </section>
+    </div>
+
+    <div class="col-md-4 well-details">
+        <h5>@Html.DisplayFor(model => model.Name)</h5>
+        <div class="panel">
+            <p>
+                <u>Occasion</u>: @Html.DisplayFor(model => model.Occasion)<br />
+                <u>Season</u>: @Html.DisplayFor(model => model.Season)<br /><br />
+
+                <nav>
+                    <ul>
+                        <li><a href="#one">@Html.DisplayFor(model => model.Top.Name)</a></li><br />
+                        <li><a href="#two">@Html.DisplayFor(model => model.Bottom.Name)</a></li><br />
+                        <li><a href="#three">@Html.DisplayFor(model => model.Accessory.Name)</a></li><br />
+                        <li><a href="#four">@Html.DisplayFor(model => model.Sho.Name)</a></li><br />
+                    </ul>
+                </nav>
+            </p><br /><br />
+            <p>
+                <button type="button" class="btn btn-default">Edit<a href="@Url.Action("Edit", new { id = Model.OutfitsID })"> <i class="far fa-edit"></i></a></button>
+                <button type="button" class="btn btn-default">Return to List of Outfits<a href="/Outfits/Index"> <i class="fas fa-list-ul"></i></a></button>
+            </p>
+
+        </div>
+
+
+    </div>
+
+    <div class="col-md-1"></div>
+</div></div>
+
+@*<h2>Details</h2>
+
+<div>
+    <h4>Outfit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Occasion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Occasion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Season)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Season)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Accessory.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Accessory.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bottom.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bottom.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sho.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sho.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Top.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Top.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OutfitsID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@

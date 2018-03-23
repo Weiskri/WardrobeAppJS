@@ -1,0 +1,36 @@
+﻿@model WardrobeApp.Models.Bottom
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="row details">
+    <div class="col-md-1"></div>
+    <div class="col-md-4">
+        <div class="thumbnail details-thumb">
+            <img src="@Html.DisplayFor(model => model.Photo)" class="clothing-details" />
+        </div>
+    </div>
+
+    <div class="col-md-6 well-details">
+        <h5>@Html.DisplayFor(model => model.Name)</h5>
+        <div class='banner'><div class='banner_l'></div><div class='banner_txt'>@Html.DisplayFor(model => model.Type)</div><div class='banner_r'></div></div>
+        <div class="panel">
+            <p>
+                <u>Color</u>: @Html.DisplayFor(model => model.Color)<br />
+                <u>Occasion</u>: @Html.DisplayFor(model => model.Occasion)<br />
+                <u>Season</u>: @Html.DisplayFor(model => model.Season)
+            </p><br /><br />
+            <p>
+                <button type="button" class="btn btn-default">Edit<a href="@Url.Action("Edit", new { id = Model.BottomsID })"> <i class="far fa-edit"></i></a></button>
+                <button type="button" class="btn btn-default">Return to List of Bottoms<a href="/Bottoms/Index"> <i class="fas fa-list-ul"></i></a></button>
+            </p>
+
+        </div>
+
+
+    </div>
+
+    <div class="col-md-1"></div>
+</div></div>
+

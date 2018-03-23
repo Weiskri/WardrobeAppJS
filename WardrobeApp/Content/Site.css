@@ -1,0 +1,813 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: url('Images/wallpaper.jpg');
+    background-repeat: repeat;
+    font-family: 'Roboto', sans-serif;
+    color: #2b2b28;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.thumbnail.home { /*This controls the boxes on the home page that contain navigation elements to saved outfits, create an outfit, and all the categories*/
+    background-color: #f7f6f2;
+    border: 10px solid white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+h1 { /*This is the page title on the home page only*/
+    font-family: 'Pacifico', sans-serif;
+    color: #283463;
+    text-align: left;
+    font-size: 70px;
+    opacity: .8;
+    margin-left: 60px;
+}
+
+h2 {
+    font-family: 'Merriweather Sans', sans-serif;
+    color: #d6ac04;
+}
+
+h3 { /*Gold titles*/
+    font-family: 'Merriweather Sans', sans-serif;
+    color: #b5b541;
+}
+
+h4 { /*This controls the titles on all the category pages, delete, create, etc.*/
+    font-family: 'Pacifico', sans-serif;
+    color: #283463;
+    font-size: 70px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+h5 { /*This controls the headers on details pages*/
+    font-family: 'Pacifico', sans-serif;
+    font-size: 40px;
+    margin-top: 30px;
+    color: #283463;
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+
+.btn.btn-default { /*This controls ALL button styling*/
+    color: #917401;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid #606000;
+}
+
+/*Navbar Styling*/
+
+.navbar-inverse .navbar-nav > li > a {
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #7a5b3d;
+    text-align: right;
+}
+
+    .navbar-inverse .navbar-nav > li > a:hover {
+        color: #a87e01;
+    }
+
+a {
+    color: #7a5b3d;
+}
+
+    a:hover {
+        color: #a87e01;
+        text-decoration: none;
+    }
+
+.navbar-inverse {
+    background: #f7f6f2;
+    text-align: right;
+    border: 0px;
+    position: absolute;
+    border-bottom: 1px solid #b5b541;
+    border-top: 1px solid #b5b541;
+}
+
+button.navbar-toggle {
+    background-color: #d8d7d4;
+}
+
+a.navbar-brand {
+    text-transform: uppercase;
+    color: #d6a102!important;
+}
+
+.icon-hanger {
+    font-size: 50px;
+    color: #40486b;
+}
+
+
+/*image gallery on Home Page*/
+
+ul {
+    list-style-type: none;
+}
+
+li img {
+    height: auto;
+    width: 200px;
+    -webkit-filter: sepia(.4);
+    filter: sepia(.4);
+    float: left;
+    margin: 10px;
+    border: 10px solid #40486b;
+    -webkit-transition: box-shadow 0.5s ease;
+    -moz-transition: box-shadow 0.5s ease;
+    -o-transition: box-shadow 0.5s ease;
+    -ms-transition: box-shadow 0.5s ease;
+    transition: box-shadow 0.5s ease;
+    overflow: hidden;
+}
+
+li img:hover {
+    -webkit-box-shadow: 0px 0px 7px rgba(255,255,255,0.9);
+    box-shadow: 0px 0px 7px rgba(255,255,255,0.9);
+}
+#Hegel {
+    max-width: 100%;
+    height: auto;
+}
+
+#Olivia {
+    max-width: 100%;
+    height: auto;
+}
+
+#Lily {
+    max-width: 100%;
+    height: auto;
+}
+
+#Lop { 
+    height: 450px;
+    width: auto;
+}
+
+
+footer {
+    background-color: #f7f6f2;
+    text-transform: uppercase;
+    color: #917401;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.clothes-thumbnail {
+    height: 150px;
+    width: auto;
+    border: 2px solid white;
+}
+
+.thumbnail.outfit {
+    background-color: #f7f6f2;
+    border: 10px solid white;
+}
+
+.caption.outfit {
+    color: #5b5b4f;
+}
+
+/*Banners - These show the "type" for each item of clothing*/
+
+
+.banner {
+    text-align: center;
+    font-size: 20%;
+    margin-top: 3em;
+}
+
+.banner_l {
+    border: 3.4em solid #f2f2b0;
+    border-left: 3.4em solid transparent;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: 2.4em;
+    left: 2.5em;
+    z-index: 1;
+}
+
+.banner_txt {
+    background: #f2f2b0;
+    border: 0.05em solid #f4f4ef;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    z-index: 2;
+    color: #ada100;
+    padding: 0.1em 0.5em;
+    font-size: 5em;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+
+.banner_r {
+    border: 3.4em solid #f2f2b0;
+    border-right: 3.4em solid transparent;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: 2.4em;
+    left: -2.5em;
+    z-index: 1;
+}
+
+.outfit-thumbs {
+    width: auto;
+    height: 100px;
+}
+
+.clothing-details {
+    height: 400px;
+    width: auto;
+    margin: 50px 50px 50px 50px;
+    border: 2px solid #d6a102;
+}
+
+.thumbnail.details-thumb {
+    margin-top: 30px;
+    background-color: #e0e0db;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.panel {
+    padding: 50px;
+    background-color: #f9f9f9;
+    flex-wrap: wrap;
+}
+
+.panel > p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    color: navy;
+
+}
+
+/*This styles all the things in this row type with the curved border*/
+.row.details {
+    margin-top: 70px;
+    border-left: 25px solid rgb(145, 116, 0);
+    border-left: 25px solid rgba(145, 116, 0, .5);
+    border-right: 25px solid rgb(145, 116, 0);
+    border-right: 25px solid rgba(145, 116, 0, .5);
+    border-radius: 90px;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    padding-bottom: 20px;
+}
+
+.row.home { /*Margins are screwed up, so this is one of the fixes*/
+    margin-top: 100px;
+
+}
+
+/*Put everything in a container on the home page so I could put a border around it. Very fancy.*/
+.container.main-page {
+    border-left: 10px dashed rgba(181, 181, 65, .4);
+    border-right: 10px dashed rgba(181, 181, 65, .4);
+    padding-bottom: 30px;
+    margin-bottom: 0px;
+}
+
+/*On the create and edit pages, this controls the font color.*/
+.form-group {
+    color: #283463;
+}
+
+/*loader*/
+#loader {
+    background: #e2b29f;
+    align-content: center;
+}
+
+.flying-area {
+    background-color: #d5d6a7;
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.ufo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -75px 0 0 -75px;
+    -webkit-animation: radial 20s infinite linear normal;
+    -moz-animation: radial 20s infinite linear normal;
+    -o-animation: radial 20s infinite linear normal;
+    animation: radial 20s infinite linear normal;
+}
+
+.rabbit-wrap {
+    width: 51px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+    .rabbit-wrap:before {
+        content: '';
+        display: block;
+        height: 10px;
+        position: absolute;
+        left: 2px;
+        top: 48px;
+        right: 0;
+        border-radius: 0 5px 5px 0;
+        box-shadow: 0 -3px 3px rgba(0,0,0,0.3) inset;
+        -webkit-transform: rotate(-15deg);
+        -moz-transform: rotate(-15deg);
+        -o-transform: rotate(-15deg);
+        -ms-transform: rotate(-15deg);
+        transform: rotate(-15deg);
+        z-index: 1;
+    }
+
+.rabbit-head {
+    width: 24px;
+    height: 22px;
+    margin: 0 0 -10px 7px;
+    position: relative;
+    z-index: 2;
+    border: 1px solid #444;
+    border-radius: 60% 60% 50% 50%;
+    box-shadow: 2px -1px 5px rgba(0,0,0,0.2) inset, 2px -1px 2px rgba(0,0,0,0.25) inset;
+    background-color: #fff;
+}
+
+.rabbit-eye__left {
+    width: 3px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    background-color: #444;
+}
+
+.rabbit-eye__right {
+    width: 3px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: 16px;
+    background-color: #444;
+}
+
+.rabbit-noose {
+    width: 8px;
+    height: 4px;
+    border-radius: 50% 50% 50% 50%;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    background-color: #444444;
+}
+
+    .rabbit-noose:before {
+        content: "";
+        display: block;
+        width: 4px;
+        height: 6px;
+        border-radius: 50% 50% 50% 50%;
+        position: absolute;
+        left: 3px;
+        background-color: #444444;
+    }
+
+.rabbit-ear__left {
+    width: 6px;
+    height: 27px;
+    border: 1px solid #444444;
+    position: absolute;
+    left: -8px;
+    top: -15px;
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: -2px 1px 1px rgba(0,0,0,0.30) inset;
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+
+    .rabbit-ear__left:after {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        left: -1px;
+        bottom: -3px;
+        background-color: #fff;
+    }
+
+.rabbit-ear__right {
+    width: 6px;
+    height: 25px;
+    border: 1px solid #444444;
+    position: absolute;
+    left: 5px;
+    top: -21px;
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: -2px 1px 1px rgba(0,0,0,0.30) inset;
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+
+    .rabbit-ear__right:after {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        left: -1px;
+        bottom: -3px;
+        background-color: #fff;
+    }
+
+.rabbit-body {
+    width: 35px;
+    height: 60px;
+    position: relative;
+    border-radius: 50%;
+    border: 1px solid #444;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2) inset, 0 5px 3px rgba(0, 0, 0, 0.3) inset;
+    background-color: #fff;
+}
+
+    .rabbit-body:after {
+        content: '';
+        display: block;
+        width: 16px;
+        height: 35px;
+        position: absolute;
+        right: -10px;
+        top: 10px;
+        z-index: -1;
+        border-radius: 0 100% 0 0;
+        border-right: 1px solid #444;
+        box-shadow: -5px -4px 5px rgba(0, 0, 0, 0.3) inset, -2px 2px 2px rgba(0, 0, 0, 0.2) inset, 8px 0 2px rgba(0,0,0,0.2) inset;
+        background-color: #fff;
+        -webkit-transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+        -o-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+
+    .rabbit-body:before {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        border: 1px solid #444;
+        border-radius: 50% 45%;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) inset, 6px -1px 3px rgba(0, 0, 0, 0.6) inset;
+        position: absolute;
+        right: -15px;
+        top: 27px;
+        z-index: -1;
+        background-color: #fff;
+    }
+
+.rabbit-hands {
+    position: relative;
+    z-index: 0;
+}
+
+.rabbit-hands__left {
+    width: 7px;
+    height: 13px;
+    border: 1px solid #444;
+    border-top: none;
+    border-radius: 0 0 100% 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 31px;
+    left: 8px;
+    box-shadow: 0 -4px 2px rgba(0, 0, 0, 0.2) inset;
+}
+    /* соединение двух лап */
+    .rabbit-hands__left:before {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 15px;
+        border-top: 1px solid #444;
+        border-radius: 100% 100% 0 0;
+        background-color: #fff;
+        position: absolute;
+        top: -3px;
+        left: 7px;
+        box-shadow: 0 5px 2px rgba(0, 0, 0, 0.3) inset;
+        z-index: -1;
+    }
+
+.rabbit-hands__right {
+    width: 7px;
+    height: 11px;
+    border: 1px solid #444;
+    border-top: none;
+    border-radius: 0 0 100% 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 30px;
+    left: 21px;
+    box-shadow: 0 -4px 2px rgba(0, 0, 0, 0.2) inset;
+}
+
+.carrot-wrap {
+    position: relative;
+    top: -20px;
+    z-index: 2;
+    width: 150px;
+    height: 40px;
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+
+.carrot-body__top {
+    width: 90%;
+    height: 19px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid #444;
+    border-bottom: none;
+    border-radius: 100% 20% 0 0;
+    background-color: orange;
+    box-shadow: 0 0px 1px rgba(0,0,0,0.3) inset
+}
+    /* большой лист морковки */
+    .carrot-body__top:before {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 10px;
+        position: absolute;
+        top: 12px;
+        right: -50px;
+        border: 1px solid darkgreen;
+        border-radius: 50%;
+        background-color: green;
+        box-shadow: -1px -1px 5px rgba(0,0,0,0.3) inset;
+        -webkit-transform: rotate(-5deg);
+        -moz-transform: rotate(-5deg);
+        -o-transform: rotate(-5deg);
+        -ms-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+    }
+    .carrot-body__top:after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 6px;
+        position: absolute;
+        top: 25px;
+        right: -35px;
+        border: 1px solid darkgreen;
+        border-radius: 50%;
+        background-color: green;
+        box-shadow: -1px -1px 5px rgba(0,0,0,0.3) inset;
+        -webkit-transform: rotate(30deg);
+        -moz-transform: rotate(30deg);
+        -o-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+        transform: rotate(30deg);
+    }
+
+.carrot-body__bottom {
+    width: 90%;
+    height: 19px;
+    margin: 0 auto;
+    position: relative;
+    top: -1px;
+    border: 1px solid #444;
+    border-top: none;
+    border-radius: 0 0 20% 100%;
+    background-color: orange;
+    box-shadow: -5px -5px 3px rgba(0, 0, 0, 0.3) inset;
+}
+    .carrot-body__bottom:before {
+        content: '';
+        position: absolute;
+        top: -6px;
+        left: -3px;
+        width: 10px;
+        height: 12px;
+        background-color: orange;
+        overflow: hidden;
+        border-radius: 100% 0 0 100%;
+        border-left: 1px solid #444;
+        box-shadow: 2px -2px 3px rgba(0, 0, 0, 0.2) inset;
+    }
+    .carrot-body__bottom:after {
+        content: '';
+        position: absolute;
+        top: -17px;
+        right: -7px;
+        width: 15px;
+        height: 34px;
+        background-color: orange;
+        overflow: hidden;
+        border-radius: 0 100% 100% 0;
+        border-right: 1px solid #444;
+        box-shadow: -5px -4px 5px rgba(0, 0, 0, 0.3) inset;
+    }
+
+@-webkit-keyframes radial {
+    0% {
+        -webkit-transform: rotate(0deg) translateX(100px) rotate(0deg);
+        transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg) translateX(100px) rotate(-360deg);
+        transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+}
+
+@-moz-keyframes radial {
+    0% {
+        -moz-transform: rotate(0deg) translateX(100px) rotate(0deg);
+        transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg) translateX(100px) rotate(-360deg);
+        transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+}
+
+@-o-keyframes radial {
+    0% {
+        -o-transform: rotate(0deg) translateX(100px) rotate(0deg);
+        transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+
+    100% {
+        -o-transform: rotate(360deg) translateX(100px) rotate(-360deg);
+        transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+}
+
+@keyframes radial {
+    0% {
+        -webkit-transform: rotate(0deg) translateX(100px) rotate(0deg);
+        -moz-transform: rotate(0deg) translateX(100px) rotate(0deg);
+        -o-transform: rotate(0deg) translateX(100px) rotate(0deg);
+        transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg) translateX(100px) rotate(-360deg);
+        -moz-transform: rotate(360deg) translateX(100px) rotate(-360deg);
+        -o-transform: rotate(360deg) translateX(100px) rotate(-360deg);
+        transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+}
+
+
+
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+#myDiv { /*This gem centers everything*/
+    display: none;
+    text-align: center;
+}
+
+
+/*Image Gallery on Outfit Details Page (This is the only place where this formatting is used)*/
+
+nav a {
+    color: #917401;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid #606000;
+    background: none;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+    nav a:hover, nav a:focus {
+        background: #dddddd;
+    }
+
+
+@media screen and (min-width: 400px) { /*Enables user to click on a button and have the appropriate image change from grayscale to full color*/
+    .target {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s;
+    }
+        .target:target {
+            position: relative;
+            -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+        }
+}
+
+.outfits-gallery { /*This resizes the pictures in the outfit details page*/
+    height: 200px;
+    width: auto;
+    border: 5px solid white;
+    margin: 10px;
+}
+
+article { /*This ensures that the images on the outfit details page stay in a line and don't just stack */
+    display: inline-block;
+}
+.gallery { /*Margins are screwed up, so this fixes the top -- I really hate using padding, but margins didn't work*/
+    padding-top: 60px;
+}
+
+.fas.fa-exclamation-triangle { /*This is for the delete page -- it controls just the warning triangle*/
+    font-size: 150px;
+    color: #283463;
+}
+
+.col-md-12.delete { /*Fixes margin on delete page*/
+    margin-top: 100px;
+}
+

@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Dress Your Bunny</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Roboto|Pacifico" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://i.icomoon.io/public/234ccb3045/Lineariconsall/style.css">
+</head>
+    <body onload="myFunction()" style="margin:0;">
+        @* Page loader *@
+
+        <div id="loader">
+            <div class="flying-area">
+                <div class="ufo">
+                    <div class="rabbit-wrap">
+                        <div class="rabbit-head">
+                            <div class="rabbit-ear__left">
+                            </div>
+                            <div class="rabbit-ear__right">
+                            </div>
+                            <div class="rabbit-eye__left">
+                            </div>
+                            <div class="rabbit-eye__right">
+                            </div>
+                            <div class="rabbit-noose">
+                            </div>
+                        </div>
+                        <div class="rabbit-body">
+                            <div class="rabbit-hands">
+                                <div class="rabbit-hands__left">
+                                </div>
+                                <div class="rabbit-hands__right">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carrot-wrap">
+                        <div class="carrot-body__top">
+                        </div>
+                        <div class="carrot-body__bottom">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="display:none;" id="myDiv" class="animate-bottom">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        @Html.ActionLink("Bunderhosen", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Tops", "Index", "Tops")</li>
+                            <li>@Html.ActionLink("Bottoms", "Index", "Bottoms")</li>
+                            <li>@Html.ActionLink("Accessories", "Index", "Accessories")</li>
+                            <li>@Html.ActionLink("Shoes", "Index", "Shoes")</li>
+                            <li>@Html.ActionLink("Outfits", "Index", "Outfits")</li>
+                        </ul>
+                        <span class="icon-hanger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="container body-content">
+                @RenderBody()
+                <hr />
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - Kristin Weis</p>
+                </footer>
+            </div>
+            <script>
+                var myVar;
+
+                function myFunction() {
+                    myVar = setTimeout(showPage, 3000);
+                }
+
+                function showPage() {
+                    document.getElementById("loader").style.display = "none";
+                    document.getElementById("myDiv").style.display = "block";
+                }
+            </script>
+
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
+</body>
+</html>

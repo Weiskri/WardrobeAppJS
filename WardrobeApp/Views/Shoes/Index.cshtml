@@ -1,0 +1,34 @@
+﻿@model IEnumerable<WardrobeApp.Models.Sho>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h4>Shoes</h4>
+
+<p>
+    <button type="button" class="btn btn-default">Add New Shoes to the Closet<a href="/Shoes/Create"> <i class="fas fa-plus-circle"></i></a></button>
+</p>
+
+@foreach (var item in Model)
+{
+    <div class="col-md-4">
+        <div class="thumbnail outfit">
+            <div class="caption outfit">
+                <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+                <img src="@Html.DisplayFor(modelItem => item.Photo)" class="clothes-thumbnail" /><br /><br />
+                <p>
+                    <div class='banner'><div class='banner_l'></div><div class='banner_txt'>@Html.DisplayFor(modelItem => item.Type)</div><div class='banner_r'></div></div>
+                </p>
+                <p>
+                    <a href="@Url.Action("Edit", "Shoes", new { id = item.ShoesID })" class="fas fa-edit"></a>
+                    <a href="@Url.Action("Details", "Shoes", new { id = item.ShoesID })" class="fas fa-info-circle"></a>
+                    <a href="@Url.Action("Delete", "Shoes", new { id = item.ShoesID})" class="fas fa-trash-alt"></a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+}
+
+</div>
