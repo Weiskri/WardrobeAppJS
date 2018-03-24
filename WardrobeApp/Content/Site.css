@@ -827,3 +827,189 @@ article { /*This ensures that the images on the outfit details page stay in a li
     color: #a87e01;
 }
 
+
+
+.overlay-ribbon {
+    position: absolute;
+    width: 13em;
+    height: 14em;
+    z-index: 9999;
+    top: 0;
+    right: 2%;
+    background: #40486b;
+    padding: 5px 0;
+    -webkit-box-shadow: -5px 21px 28px -4px rgba(0, 0, 0, 0.43);
+    -moz-box-shadow: -5px 21px 28px -4px rgba(0, 0, 0, 0.43);
+    box-shadow: -5px 21px 28px -4px rgba(0, 0, 0, 0.43);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    animation: slidein 3s ease-in-out forwards;
+}
+
+.ribbon-content {
+    z-index: 99999;
+    position: relative;
+    margin: 0 5px;
+}
+
+    .ribbon-content h3 {
+        margin: 0;
+        padding: 5px 0 5px 0;
+        line-height: 16px;
+        letter-spacing: 3px;
+        font-family: 'Merriweather Sans', sans-serif;
+        color: #e2e2c7;
+        text-align: center;
+    }
+
+    .ribbon-content > p,
+    .ribbon-content > p span {
+        color: #24505a;
+        margin: 0;
+        padding: 0;
+    }
+
+    .ribbon-content p span {
+        display: block;
+    }
+
+#close {
+    background: none;
+    border: none;
+    float: right;
+    color: #e5e569;
+}
+
+.overlay-ribbon:before {
+    content: "";
+    position: absolute;
+    bottom: -9em;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 10em solid #40486b;
+    border-right: 10em solid transparent;
+    z-index: 997;
+}
+
+.overlay-ribbon:after {
+    content: "";
+    position: absolute;
+    bottom: -9em;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 10em solid #40486b;
+    border-left: 10em solid transparent;
+    z-index: 998;
+}
+
+.slideout {
+    animation: slideout 1s ease-in-out forwards;
+}
+
+@-webkit-keyframes slidein {
+    from {
+        transform: translate(0, -400px);
+    }
+
+    to {
+        transform: translate(0, 100px);
+    }
+}
+
+@-o-keyframes slidein {
+    from {
+        transform: translate(0, -400px);
+    }
+
+    to {
+        transform: translate(0, 100px);
+    }
+}
+
+@-moz-keyframes slidein {
+    from {
+        transform: translate(0, -400px);
+    }
+
+    to {
+        transform: translate(0, 100px);
+    }
+}
+
+@keyframes slidein {
+    from {
+        transform: translate(0, -400px);
+    }
+
+    to {
+        transform: translate(0, 100px);
+    }
+}
+
+@-webkit-keyframes slideout {
+    from {
+        transform: translate(0, 100px);
+    }
+
+    to {
+        transform: translate(0, -400px);
+    }
+}
+
+@-o-keyframes slideout {
+    from {
+        transform: translate(0, 100px);
+    }
+
+    to {
+        transform: translate(0, -400px);
+    }
+}
+
+@-moz-keyframes slideout {
+    from {
+        transform: translate(0, 100px);
+    }
+
+    to {
+        transform: translate(0, -400px);
+    }
+}
+
+@keyframes slideout {
+    from {
+        transform: translate(0, 100px);
+    }
+
+    to {
+        transform: translate(0, -400px);
+    }
+}
+
+@keyframes jackInTheBox {
+    from {
+        opacity: 0;
+        transform: scale(0.1) rotate(30deg);
+        transform-origin: center bottom;
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    70% {
+        transform: rotate(3deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.jackInTheBox {
+    animation-name: jackInTheBox;
+}

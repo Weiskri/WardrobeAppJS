@@ -15,10 +15,10 @@
     <div class="col-md-4">
     <div class="thumbnail outfit">
         <div class="caption outfit">
-            <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+            <h3 id="clothing-item">@Html.DisplayFor(modelItem => item.Name)</h3>
             <img src="@Html.DisplayFor(modelItem => item.Photo)" class="clothes-thumbnail" /><br /><br />
             <p>
-                <div class='banner'><div class='banner_l'></div><div class='banner_txt'>@Html.DisplayFor(modelItem => item.Type)</div><div class='banner_r'></div></div>
+                <div class='banner'><div class='banner_l'></div><div class='banner_txt' id="banner">@Html.DisplayFor(modelItem => item.Type)</div><div class='banner_r'></div></div>
             </p>
             <p>
                 <a href="@Url.Action("Edit", "Tops", new { id = item.TopsID })" class="fas fa-edit"></a>
