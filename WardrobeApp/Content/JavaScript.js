@@ -40,7 +40,9 @@ function trivia() {
     var correctAnswerArray = ["cabbage", "avocado"]
     var userResponse = prompt('Of the following foods, which can be fatal to a rabbit?\n' + triviaArray);
 
-    if (correctAnswerArray.includes(userResponse)) {
+    var response = userResponse.toLowerCase();
+
+    if (correctAnswerArray.includes(response)) {
         alert('Correct');
     }
 
