@@ -86,3 +86,39 @@ function myRepeatFunction() {
 function myEndFunction() {
     this.style.color = "#b8b2ba";
 }
+
+var clothingArray = [];
+var typeArray = [];
+var resultsArray = [];
+
+function createArray() {
+
+    var coll = document.getElementsByTagName('h3');
+    for (var i = 0; i < coll.length; i++) clothingArray.push(coll[i].innerText);
+
+    var coll2 = document.getElementsByClassName('banner_txt');
+    for (var i = 0; i < coll2.length; i++) typeArray.push(coll2[i].innerText);
+
+
+}
+
+function sortClothes() {
+
+    var userResponse = prompt('What type of clothing are you interested in?');
+
+    var response = userResponse.toString();
+
+    var responseLower = response.toLowerCase();
+
+    var arrayLength = typeArray.length;
+
+    for (var i = 0; i < arrayLength; i++) {
+        if (typeArray[i] == responseLower) {
+            alert(clothingArray[i]);
+        }
+        else {
+
+        }
+
+    }
+}
